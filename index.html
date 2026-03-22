@@ -1,14 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-<!-- META PIXEL CODE -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BETFAIR TIPS Official</title>
+
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){
-n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-};
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
@@ -18,18 +21,12 @@ s.parentNode.insertBefore(t,s)
 
 fbq('init', '25731104246574053');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=25731104246574053&ev=PageView&noscript=1"/>
 </noscript>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BETFAIR TIPS Official</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -39,24 +36,28 @@ background:#0f172a;
 font-family:sans-serif;
 margin:0;
 }
+
 .title{
-font-size:2.4rem;
+font-size:2.2rem;
 font-weight:800;
 color:#fff200;
-text-align:center;
 }
+
 .subtitle{
 color:#ffb300;
 font-weight:bold;
 }
+
 @keyframes pulse{
 0%{transform:scale(1)}
-50%{transform:scale(1.08)}
+50%{transform:scale(1.07)}
 100%{transform:scale(1)}
 }
+
 .telegrambtn{
-animation:pulse 2s infinite;
+animation:pulse 1.8s infinite;
 }
+
 .hurry{
 animation:pulse 1s infinite;
 color:#ff4444;
@@ -70,14 +71,13 @@ font-weight:bold;
 
 <div>
 
-<h1 class="title mt-2">BETFAIR TIPS</h1>
-
+<h1 class="title">BETFAIR TIPS</h1>
 <p class="subtitle">(Official Telegram)</p>
 
 <div class="mt-6 text-xl flex justify-center gap-2">
 <span class="hurry">Join Now</span>
-<span id="countdown" class="text-yellow-400 text-2xl font-bold"></span>
-<span>Seconds Left</span>
+<span id="countdown" class="text-yellow-400 text-2xl font-bold">30</span>
+<span>Sec Left</span>
 </div>
 
 <div class="mt-6 text-lg">
@@ -91,15 +91,10 @@ Join Karo Daily Cricket Prediction 👇
 
 <div class="mt-10">
 <a href="https://t.me/+zYoyeOB1PiFmNGNl" id="joinBtn">
-
-<button
-class="telegrambtn px-6 py-4 rounded-lg font-bold text-white shadow-lg border-b-4 border-red-500"
+<button class="telegrambtn px-6 py-4 rounded-lg font-bold text-white shadow-lg border-b-4 border-red-500"
 style="background:linear-gradient(45deg,#00f2ff,#0099ff);">
-
 JOIN TELEGRAM CHANNEL
-
 </button>
-
 </a>
 </div>
 
@@ -117,28 +112,30 @@ We are not responsible for any financial loss.
 
 <script>
 
-let timeLeft = 10;
-const countdownElement = document.getElementById("countdown");
+let timeLeft = 30;
+const countdown = document.getElementById("countdown");
 
-const timer = setInterval(function(){
-countdownElement.textContent = timeLeft;
+const timer = setInterval(() => {
+countdown.innerText = timeLeft;
 timeLeft--;
 
 if(timeLeft < 0){
 clearInterval(timer);
 
-fbq('track','Lead');
+// Conversion tracking
+fbq('track', 'Lead');
+
+// Redirect
 window.location.href = "https://t.me/+zYoyeOB1PiFmNGNl";
 }
-
 },1000);
 
-document.getElementById("joinBtn").addEventListener("click", function(){
-fbq('track','Lead');
+// Button click tracking
+document.getElementById("joinBtn").addEventListener("click", () => {
+fbq('track', 'Lead');
 });
 
 </script>
 
 </body>
 </html>
-```
